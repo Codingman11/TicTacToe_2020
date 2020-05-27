@@ -79,16 +79,14 @@ function set(array) {
       turn = 0;
       array[arId] = pla2;
     }
-
     if (timeout === false) {
       alert("Timeout");
       if (turn === 0) {
-        turn = "O";
+        turn = 1;
       } else if (turn === 1) {
-        turn = "X";
+        turn = 0;
       }
     }
-
     moves++;
     console.log("Moves: " + moves);
   };
