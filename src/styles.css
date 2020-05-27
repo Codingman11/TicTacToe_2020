@@ -1,0 +1,26 @@
+body {
+  font-family: sans-serif;
+  margin-block-start: 100px;
+  margin-inline-start: 300px;
+}
+#table {
+  height: 400px;
+  width: 400px;
+  border-collapse: collapse;
+}
+td {
+  font-size: 30px;
+  border: 1px solid black;
+  vertical-align: middle;
+  text-align: center;
+  height: 60px;
+  width: 60px;
+}
+
+.x {
+  background-color: rgb(124, 252, 0);
+}
+
+.o {
+  background-color: rgb(250, 128, 114);
+}
