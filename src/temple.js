@@ -1,8 +1,8 @@
 import "./styles.css";
 
 var pla1 = "X",
-  pla2 = "O";
-
+  pla2 = "O",
+  EMPTY = "";
 let moves = 0;
 
 //Creating array
@@ -49,7 +49,9 @@ function test(array) {
     let arId = parseInt(el.id, 10);
     console.log(arId);
 
-    if (turn === 0) {
+    if (this.innerHTML !== EMPTY) {
+      alert("This is already marked! Try agian");
+    } else if (turn === 0) {
       el.classList.add("x");
       el.innerHTML = pla1;
       turn = 1;
