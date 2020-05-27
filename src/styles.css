@@ -3,8 +3,6 @@ body {
   margin-inline-start: 300px;
 }
 #table {
-  height: 400px;
-  width: 400px;
   border-collapse: collapse;
 }
 td {
