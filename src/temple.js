@@ -39,7 +39,24 @@ function addTable(array) {
   return array;
 }
 
-function test(array) {
+function move() {
+  var elem = document.getElementById("myBar");
+  var width = 0;
+  var id = setInterval(frame, 1000);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      return false;
+    } else {
+      width += 10;
+      elem.style.width = width + "%";
+      return true;
+    }
+  }
+}
+
+function set(array) {
+  let timeout = move();
   let cells = document.querySelectorAll(".cell");
   let turn = 0;
 
@@ -63,6 +80,15 @@ function test(array) {
       array[arId] = pla2;
     }
 
+    if (timeout === false) {
+      alert("Timeout");
+      if (turn === 0) {
+        turn = "O";
+      } else if (turn === 1) {
+        turn = "X";
+      }
+    }
+
     moves++;
     console.log("Moves: " + moves);
   };
@@ -75,6 +101,6 @@ function test(array) {
 function init() {
   let array = createArray();
   array = addTable(array);
-  test(array);
+  set(array);
 }
 init();

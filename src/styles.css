@@ -22,3 +22,12 @@ td {
 .o {
   background-color: rgb(250, 128, 114);
 }
+
+#myBar {
+  width: 0%;
+  height: 30px;
+  background-color: #4caf50;
+  text-align: center; /* To center it horizontally (if you want) */
+  line-height: 30px; /* To center it vertically */
+  color: white;
+}
