@@ -17,13 +17,14 @@ function addTable(array) {
 
   let cTable = document.createElement("table");
   cTable.setAttribute("id", "table");
+
   for (let i = 0; i < 5; i++) {
     let addTr = document.createElement("tr");
-
+    addTr.setAttribute("class", "row");
     for (let j = 0; j < 5; j++) {
       let addTd = document.createElement("td");
       addTd.setAttribute("id", x);
-      addTd.setAttribute("class", "cell");
+      addTd.setAttribute("class", "cell col s1");
 
       array[x] = x.toString();
       let node = document.createTextNode("");
