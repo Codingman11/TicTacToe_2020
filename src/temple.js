@@ -15,8 +15,8 @@ function createArray() {
 function addTable(array) {
   let x = 0;
 
-  let cTable = document.createElement("table");
-  cTable.setAttribute("id", "table");
+  let cTable = document.createElement("div");
+  cTable.setAttribute("id", "container");
 
   for (let i = 0; i < 5; i++) {
     let addTr = document.createElement("tr");
@@ -24,7 +24,7 @@ function addTable(array) {
     for (let j = 0; j < 5; j++) {
       let addTd = document.createElement("td");
       addTd.setAttribute("id", x);
-      addTd.setAttribute("class", "cell col s1");
+      addTd.setAttribute("class", "cell col");
 
       array[x] = x.toString();
       let node = document.createTextNode("");
@@ -50,7 +50,7 @@ function move() {
       return false;
     } else {
       width += 10;
-      elem.style.width = width + "%";
+      elem.style.width = width + "px";
       return true;
     }
   }
