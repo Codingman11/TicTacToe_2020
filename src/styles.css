@@ -1,4 +1,4 @@
-body {
+#container {
   margin-block-start: 100px;
   margin-inline-start: 300px;
 }
@@ -24,9 +24,9 @@ body {
 }
 
 #myBar {
-  width: 0%;
+  margin-inline-start: 300px;
   height: 30px;
-  background-color: #4caf50;
+  max-width: 300px;
   text-align: center; /* To center it horizontally (if you want) */
   line-height: 30px; /* To center it vertically */
   color: white;

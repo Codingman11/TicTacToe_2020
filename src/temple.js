@@ -41,23 +41,26 @@ function addTable(array) {
 }
 
 function move() {
-  var elem = document.getElementById("myBar");
+  var myBar = document.getElementById("myBar");
+  let progress = document.createElement("div");
+  progress.setAttribute("class", "determinate");
+
+  myBar.appendChild(progress);
   var width = 0;
   var id = setInterval(frame, 1000);
   function frame() {
-    if (width >= 100) {
+    if (width > 100) {
       clearInterval(id);
-      return false;
+      alert("timeout");
     } else {
       width += 10;
-      elem.style.width = width + "px";
-      return true;
+      progress.style.width = width + "%";
     }
   }
 }
 
 function set(array) {
-  let timeout = move();
+  move();
   let cells = document.querySelectorAll(".cell");
   let turn = 0;
 
@@ -79,14 +82,8 @@ function set(array) {
       el.innerHTML = pla2;
       turn = 0;
       array[arId] = pla2;
-    }
-    if (timeout === false) {
-      alert("Timeout");
-      if (turn === 0) {
-        turn = 1;
-      } else if (turn === 1) {
-        turn = 0;
-      }
+    } else {
+      alert("timeout!");
     }
     moves++;
     console.log("Moves: " + moves);
